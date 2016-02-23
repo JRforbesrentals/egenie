@@ -1,0 +1,62 @@
+#project {
+  background:$lightest;
+  border:2px solid darken($midgrey,20%);
+}
+.ui-autocomplete {
+	z-index:10000000;
+	background:$lightest;
+	width:10em;
+	color:darken($midgrey,30%);
+	@include border-radius(0.5em);
+	font-size:0.9em;
+	font-weight:bold;
+	border:3px solid lighten($border,15%);
+}
+.ui-autocomplete li {
+	display:block;
+	border-bottom:1px solid $border;
+	padding:$defaultgap / 2 0;
+	&:hover {
+		background:lighten($border,50%);
+	}
+}
+.ui-autocomplete li:last-child {
+	border-bottom:0;
+} 
+.ui-autocomplete a {
+	padding:$defaultgap; 
+	&:hover {
+		cursor:pointer;
+	}
+}
+.product-search {
+	position:relative;
+}
+
+.product-search label {
+	font-size:1.25em;
+	font-style:oblique;
+	color:lighten($midgrey, 15%);
+	z-index:10000001;
+	position:absolute;
+	top:25px;
+	left:30px;
+	width:90%;
+	text-align:left;
+ 	@media screen and (min-width:$bptablet) {
+	top:22px;
+	left:20px;		 
+	 }
+}
+.ui-menu-item img {
+  width:60px;
+  border:2px solid lighten($border,20%);
+  float:left;
+  display:block;
+  margin:0 $defaultgap / 2 0 $defaultgap / 2;
+
+}
+.ui-menu-item span {
+  display:block;
+  margin-left:70px;
+}

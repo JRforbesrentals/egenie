@@ -1,0 +1,226 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Padding is set relative to the width
+ * of the element, so here padding-top:60% is
+ * a percentage of the width. This allows us 
+ * to set the height as a ratio of the width
+ *
+ */
+.module-carousel {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	border-radius:0;
+	border:none;
+    border-bottom:4px solid darken($carousel,10%);
+	color:$lightest;
+    color:darken($midgrey,30%);
+	float:left;
+	height:150px;
+	margin-bottom:0;
+    background:$carousel;
+
+    
+    
+   	@media screen and (min-width:$bpmobilelarge) {
+    /* height:180px; */
+
+       
+    }
+    
+   	@media screen and (min-width:$bptablet) {
+      
+     height:240px;
+    
+    }
+   
+    @media screen and (min-width:$bpdesktop) {
+    
+    }
+}
+
+.carousel-image {
+     background:$carousel url('../images/banner-phillips-tv.jpg') no-repeat center center;
+     background-size:cover;
+     height:100%;
+}
+.carousel-intro {
+    background:rgba($midgrey,.8);
+    @include border-radius(0.5em);
+    color:$lightest;
+   	@media screen and (min-width:$bpmobilelarge) {
+     margin-top:$defaultgap / 2;
+     padding:$defaultgap / 2 $defaultgap;
+     width:90%;
+    }
+   	@media screen and (min-width:$bptablet) {
+    margin:$defaultgap * 3.5 auto $defaultgap auto;
+    width:50%;       
+    }
+   	@media screen and (min-width:$bpdesktop) {
+      margin:$defaultgap * 7 auto $defaultgap auto;     
+      }
+}
+
+.module-carousel h1, .module-carousel p  {
+       font-weight:bold; 
+}
+.carousel-inner{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+/**
+ * ==========================
+ * Animation styles
+ * 
+ * Notes:
+ * 1. We use z-index to position active slides in-front 
+ * of non-active slides
+ * 2. We set right:0 and left:0 on .slide to provide us with
+ * a default positioning on both sides of the slide. This allows 
+ * us to trigger JS and CSS3 animations easily
+ *
+ */
+.slide{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	right:0;
+	left:0;
+	z-index: 1;
+	opacity: 0;
+ /*   background:url('../images/egenie-banner.jpg') no-repeat center center; */
+}
+
+.slide.active,
+.slide.left,
+.slide.right{
+	z-index: 2;
+	opacity: 1;
+}
+
+/**
+ * ==========================
+ * JS animation styles
+ * 
+ * We use jQuery.animate to control the sliding animations
+ * when CSS3 animations are not available. In order for
+ * the next slide to slide in from the right, we need
+ * to change the left:0 property of the slide to left:auto
+ *
+ */
+
+.js-reset-left{left:auto}
+
+/**
+ * ==========================
+ * CSS animation styles
+ * 
+ * .slide.left and .slide.right set-up
+ * the to-be-animated slide so that it can slide
+ * into view. For example, a slide that is about 
+ * to slide in from the right will:
+ * 1. Be positioned to the right of the viewport (right:-100%)
+ * 2. Slide in when the style is superseded with a more specific style (right:0%)
+ *
+ */
+
+/**
+ * The following classes slide the previously active
+ * slide out of view before positioning behind the 
+ * currently active slide
+ *
+ */
+
+
+/**
+ * This sets the CSS properties that will animate. We set the
+ * transition-duration property dynamically via JS.
+ * We use the browser's default transition-timing-function
+ * for simplicity's sake
+ * 
+ * It is important to note that we are using CodePen's inbuilt
+ * CSS3 property prefixer. For your own projects, you will need
+ * to prefix the transition and transform properties here to ensure
+ * reliable support across browsers
+ *
+ */
+
+/**
+ * ==========================
+ * Indicators
+ *
+ */
+
+
+
+
+.buttonwrapper {
+	width:100%;
+	display:block !important;
+	margin:auto;
+	text-align:center !important;
+	float:left;
+}
+.module-carousel h1 {
+  font-size:1.25em;
+  font-weight:bold;
+  margin-bottom:$defaultgap / 4;
+  line-height:1;
+  @media screen and (min-width:$bpmobilelarge) {
+	font-size:1.5em;
+	 line-height:1.2;
+  }
+}
+.module-carousel h2 {
+  font-size:1em;
+}
+.module-carousel p {
+	margin-bottom:0.2em;
+}
+
+.module-carousel img {
+	max-width:110px;
+ @media screen and (min-width:$bpmobilelarge) {
+  	max-width:160px;
+  }
+@media screen and (min-width:$bptablet) {
+	max-width:60%;
+	}
+}
+.hidden-mobile {
+@media screen and (max-width:$bptablet) {
+	display:none;
+}
+}
+
+
+
+
+
+
+
+
+
+
+

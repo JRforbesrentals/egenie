@@ -1,0 +1,429 @@
+@font-face {
+	font-family: 'egenie';
+	src:url('../font/egenie.eot?1o1dal');
+	src:url('../font/egenie.eot?#iefix1o1dal') format('embedded-opentype'),
+		url('../font/egenie.ttf?1o1dal') format('truetype'),
+		url('../font/egenie.woff?1o1dal') format('woff'),
+		url('../font/egenie.svg?1o1dal#forbes') format('svg');		
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"]:before, [class*="icon-"]:before, [class^="icon-"]:after, [class*="icon-"]:after {
+    position:absolute;
+	font-family: 'egenie';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-menu:before {
+	content:"\e905";
+	font-size:39px;
+    color:lighten($border,23%);
+	left:13px;
+	top:2px;
+}
+.icon-menu:after {
+	content:"\e90d";    
+    top:11px;
+    left:20px;
+    font-size:24px;
+    font-weight: bold;
+}
+.icon-home:after {
+	content: "\e90e";
+	left:13px;
+	top:15px;
+	font-size:20px;
+	visibility:visible;
+    color:darken($midgrey,20%); 
+	@media screen and (min-width:$bptablet)  {
+    color:$lightest;
+    font-size:22px;
+	left:37px;
+	top:4px;		
+	}
+	@media screen and (min-width:$bptablet)  {
+    left:43%;   
+    }
+}
+.icon-contact:before, .icon-callback:before {
+   	@media screen and (min-width:$bptablet)  {
+        content:"\e905";
+		left:10px;
+	    font-size:44px;
+        color:lighten($border,23%);
+       }
+	@media screen and (min-width:$bpdesktop)  {
+        left:40px;
+	 }
+ }
+  .icon-contact:before {
+	@media screen and (min-width:$bptablet)  {
+		top:15px;  
+	 }
+ }
+  .icon-callback:before {
+	@media screen and (min-width:$bptablet)  {
+		top:1px;  
+	 }
+ }
+ .icon-contact:after, .icon-callback:after {
+  	font-size:24px;
+	color:darken($midgrey,20%);     
+ 	@media screen and (min-width:$bptablet)  {
+    color:lighten($border,50%);      
+    font-size:26px;
+     }
+ }
+  .icon-contact:after {
+	content:"\e907";
+    left:8px;
+    top:20px;
+	@media screen and (min-width:$bptablet)  {
+    left:19px;
+	top:21px;
+	}
+  	@media screen and (min-width:$bpdesktop)  {
+	left:49px;
+    }
+}
+.icon-callback:after {
+	content:"\e906";
+    left:11px;
+    top:15px;
+	@media screen and (min-width:$bptablet)  {
+    color:lighten($border,50%);
+    left:19px;
+	top:10px;
+	}
+ 	@media screen and (min-width:$bpdesktop)  {
+	left:49px;
+    }
+}
+
+/* footer contact &  callbacks */
+
+
+footer .icon-contact:before, footer .icon-callback:before {
+	@media screen and (min-width:$bptablet)  {
+        content:"\e905";
+        top:-4px;
+        left:-5px;
+    }
+}
+footer .icon-contact:before {
+ 	@media screen and (min-width:$bpdesktop)  {
+         top:20px;
+    }    
+}
+
+footer .icon-contact:after {
+       visibility:hidden;
+	@media screen and (min-width:$bptablet)  {
+        visibility:visible;
+        top:4px;
+        left:5px;
+}
+ 	@media screen and (min-width:$bpdesktop)  {      
+        top:25px;
+        left:4px;
+    }
+}
+footer .icon-callback:after {
+    visibility:hidden;
+	@media screen and (min-width:$bptablet)  {
+        visibility:visible;
+        top:4px;
+        left:5px;
+    }
+ 	@media screen and (min-width:$bpdesktop)  {      
+        top:5px;
+        left:4px;
+    }
+}
+
+
+/* mobile menu icons */
+
+[class*="icon-dropdown-"]:before {
+   	position:absolute;
+	content: "\e905";
+    right:10px;
+    top:9px;
+    font-size:30px;
+    color:lighten($midgrey,50%);
+    @media screen and (min-width:$bptablet)  {
+    display:none;      
+    } 
+}
+.icon-dropdown-closed:after,.icon-dropdown-open:after {
+	position:absolute;
+	content: "";
+    right:16px;
+    top:16px;
+    font-size:18px;
+    color:lighten($midgrey,10%);
+    @media screen and (min-width:$bptablet)  {
+    display:none;     
+    }
+}
+.icon-dropdown-closed:after {
+	position:absolute;
+	content: "\e902";
+    @media screen and (min-width:$bptablet)  {
+    display:none; 
+    }
+}
+.icon-dropdown-open:after {
+	content: "\e901";
+    @media screen and (min-width:$bptablet)  {
+    display:none; 
+    }
+}
+
+
+[class*="icon-category-"]:after {
+    left:10px;
+    top:12px;
+    font-size:28px;
+    font-weight:bold; 
+    color:darken($midgrey,15%);
+    z-index:1;
+    @media screen and (min-width:$bpmobilelarge)  {
+    left:12px;
+    top:8px;
+    font-size:36px;           
+    }   
+    @media screen and (min-width:$bptablet)  {
+     display:none;
+    }
+}
+.icon-category-egenie:after {
+ 	 content: "\e921";
+     font-size:16px;
+     color:$border;
+     left:15px;
+     top:16px;
+     @media screen and (min-width:$bpmobilelarge)  {
+     left:26px;   
+    }
+}
+.icon-category-contactegenie:after {
+ 	content: "\e907";
+}
+.icon-category-entertainment:after {
+ 	content: "\e918";
+}
+.icon-category-laundry:after {
+ 	content: "\e91f";
+}
+.icon-category-refrigeration:after {
+ 	content: "\e90c";
+}
+.icon-category-dishwasher:after {
+ 	content: "\e90a";
+}
+.icon-category-cookersvacuum:after {
+ 	content: "\e909";
+}
+
+
+[class*="icon-subcategory-"]:after {
+    left:11px;
+    top:-1px;
+    font-size:24px;
+    color:darken($midgrey,20%);
+    z-index:1;
+    @media screen and (min-width:$bpmobilelarge)  {
+    left:6px;
+    top:-5px;
+    font-size:32px;           
+    }   
+    @media screen and (min-width:$bptablet)  {
+     display:none;        
+    }
+}
+.icon-subcategory-televisions:after {
+    content: "\e928";
+}
+.icon-subcategory-blueray:after {
+    content: "\e929";
+}
+.icon-subcategory-homecinema:after {
+    content: "\e92b";
+}
+.icon-subcategory-tvaccessories:after {
+    content: "\e92c";
+}
+.icon-subcategory-washingmachines:after {
+    content: "\e91f";
+}
+.icon-subcategory-washerdryers:after {
+    content: "\e927";
+}
+.icon-subcategory-tumbledryers:after {
+    content: "\e926";
+}
+.icon-subcategory-fridgefreezers:after {
+    content: "\e923";
+}
+.icon-subcategory-freezers:after {
+    content: "\e922";
+
+}
+.icon-subcategory-fridges:after {
+    content: "\e90c";
+}
+.icon-subcategory-dishwashers:after {
+    content: "\e90a";
+}
+.icon-subcategory-cookers:after {
+    content: "\e908";
+}
+.icon-subcategory-vacuums:after {
+    content: "\e91c";
+    font-size:28px;
+}
+.icon-subcategory-microwaves:after {
+    content: "\e924";
+}
+
+
+
+/* Homepage purchase steps */
+
+[class*="icon-step-"]:after {
+	display:none;
+	@media screen and (min-width:$bptablet)  {
+    display:block;
+	top:37px;
+	left:38%;
+    color:lighten($midgrey,20%);
+	font-size:85px;
+	top:60px;
+	left:24%;
+}
+	@media screen and (min-width:$bpdesktop)  {
+	top:43px;
+    font-size:95px;
+	left:30%;
+	}
+}
+.icon-step-1:after {
+	content: "\e914";
+}
+.icon-step-2:after {
+	content: "\e900";
+}
+.icon-step-3:after {
+	content: "\e910";
+}
+.icon-step-4:after {
+	content: "\e916";
+    @media screen and (min-width:$bptablet)  {
+	top:63px;
+	font-size:72px;
+	}
+	@media screen and (min-width:$bpdesktop)  {
+	top:45px;
+    font-size:84px;
+	}
+}
+
+
+
+
+/* homepage usps */
+
+[class*="icon-usps-"]:before {
+    content:"\e905"; 
+    color:darken($midgrey,10%);
+    top:3px;
+    left:5px;
+    font-size:45px;
+    @media screen and (min-width:$bptablet)  {
+     top:9px;
+
+     font-size:57px;       
+   }    
+}
+
+
+.icon-usps-prices:after {
+    content:"\e917";	
+    font-size:35px;
+    left:11px;
+    top:8px;
+    @media screen and (min-width:$bptablet)  {
+    font-size:42px;
+    left:15px;
+    top:16px;
+	}  
+}
+.icon-usps-pay:after {
+    content:"\e920";
+    font-size:30px;
+    left:13px;
+    top:12px;	
+    @media screen and (min-width:$bptablet)  {
+    font-size:37px;
+    left:14px;
+    top:20px;
+    }
+	@media screen and (min-width:$bpdesktop)  {
+    left:16px;
+	}  
+}
+.icon-usps-delivery:after {
+    content:"\e91e";	
+    font-size:32px;
+    left:13px;
+    top:10px;
+    @media screen and (min-width:$bptablet)  {
+    font-size:39px;
+    left:15px;
+    top:19px;
+ } 
+}    
+
+/* toggle icons */
+
+.icon-toggle, .icon-toggle-open {
+	display:block;
+	left:0;
+	top:0;
+	}
+.icon-toggle:before, .icon-toggle-open:before {
+	content:"\e905";
+	color:$border;
+	font-size:20px;
+	left:-2px;
+}
+.icon-toggle:after {
+	content:"\e913";
+	color:$lightest;
+	font-size:10px;
+	left:3px;
+	top:4.6px;
+}
+.icon-toggle-open:after {
+	content:"\e911";
+	color:$lightest;
+	font-size:10px;
+	left:3px;
+	top:4.6px;
+}
+.icon-search:before {
+	content:"\e915";
+	font-size:1.25em;
+	color:$midgrey;
+	right:0;
+	top:0;
+}

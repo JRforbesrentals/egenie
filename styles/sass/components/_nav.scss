@@ -1,0 +1,711 @@
+@media screen and (max-width:$bpdesktop) {
+	.wrapper, nav {
+		-webkit-backface-visibility:hidden;
+		-webkit-perspective:1000;
+	}
+	.animating nav, .menu-visible nav {
+		display:block;
+	}
+	.animating .wrapper {
+		transition:transform .25s ease-in-out;
+		-webkit-transition:-webkit-transform .25s ease-in-out;
+	}
+	.animating.left .wrapper {
+		transform:translate3d(-82%,0,0);
+		-webkit-transform:translate3d(-82%,0,0);
+	}
+	.animating.right .wrapper {
+		transform:translate3d(82%,0,0);
+		-webkit-transform:translate3d(82%,0,0);
+	}
+	.menu-visible .wrapper {
+		right:82%;
+	}
+}
+a.logo {
+	display:none;
+	width:180px;
+	height:80px;
+	margin:$defaultgap 0 $defaultgap $defaultgap * 2;
+	text-align:center;
+	background: url('../images/genielamp.svg') no-repeat center center;
+    background-size:100% 100%;
+    background-size:cover;
+	@media screen and (min-width:$bptablet) {
+	display:block;
+    float:left;
+	margin:$defaultgap 0 0 0;
+	width:112px;
+	height:42px;
+	}
+}
+a#togglemenu {
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+	width:60px;
+	height:60px;
+	line-height:6em;
+	background:$border;
+	color:$lightest;
+	z-index:1003;
+	@media screen and (min-width:$bptablet) {
+		display:none;
+	}
+}
+div.headermobile {
+	margin:0 auto 0 auto;
+	position:relative;
+	background:lighten($midgrey,30%);
+	border-bottom:2px solid $border;
+ 	height:60px;
+ 	text-align:left;
+	padding:$defaultgap 10px;
+	@media screen and (min-width:$bptablet) {
+		display:none;
+	}
+}
+div.headermobile img {
+	width:215px;
+	vertical-align:middle;
+	margin-top:2px;
+	@media screen and (min-width:$bpmobilelarge) {
+		width: 320px;
+		margin-top:-5px;
+	}
+}
+div.headermobile a.logo {
+    display:block;
+    height:53px;
+    width:140px;
+    margin-top:-10px;
+    margin-left:0;
+}
+div.headermobile p.tel {
+    postion:absolute;
+    top:0;
+}
+nav {
+ 	display:none;
+    position:absolute;
+	top:0;
+	right:0;
+	width:82%;
+	padding:0 0 $defaultgap 0;
+	margin:0;
+	list-style:none;
+	z-index:1000;
+	min-height:1500px;
+	height:100vh;
+	margin:auto;
+	text-align:center;
+    background: url('../images/genielampblue.svg');
+    background-size:50%;
+    background-repeat:no-repeat;
+    background-position:50% 30%;
+@media screen and (min-width:$bptablet) {
+		position:relative;
+		margin:0 auto $defaultgap auto;
+		padding:0;
+		display:block;
+		text-align:center;
+		width:100%;
+        border-left:0;
+		font-size:0.75em;
+		z-index:4000;
+        background:none;
+	}
+	@media screen and (min-width:$bptablet) and (max-width:$bpdesktop) {
+/*		min-height:3.2em;
+		height:3.2em; */
+ 		min-height:11em;
+		height:11em;
+	}
+	@media screen and (min-width:$bpdesktop) {
+		min-height:4em;
+        height:13em;
+ 	}
+}
+nav .contentwrapper {
+	padding:0;
+	width:100%;
+	@media screen and (min-width:$bpdesktop) {
+	/* padding:0 20px; */
+	/* width:90%; ? */
+	padding:0;
+	width:100%;
+ }
+}
+nav ul, nav ul li {
+    margin-bottom:0;
+}
+nav p {
+   margin-bottom:0; 
+}
+div.nav-support .contentwrapper {
+    position:relative;
+ 	@media screen and (min-width:$bptablet) {   
+    min-height:5.5em;
+     }
+}
+[class*="submenu-"] {
+	position:absolute;
+	left:5px;
+	width:100%;
+	z-index:1003;
+    background:lighten($midgrey,25%);
+	border-top:1px solid darken($midgrey,20%);
+	border-bottom:4px solid darken($midgrey,20%); 
+	@media screen and (min-width:$bptablet) {	
+	 visibility:hidden;
+	 height:20.1em;
+	}
+}
+
+[class*="submenu-"] div.menu-column {
+	border-bottom:1px solid $lightest;
+	 @media screen and (min-width:$bptablet) {
+		 border-bottom:0;
+		 border-left:1px solid lightest;
+	 }
+	}
+.submenu-support {
+  @media screen and (min-width:$bptablet) {
+        visibility:visible;
+        position:static;
+        height:4em;
+        min-height:4em;
+        border:0; 
+  }  
+}
+.submenu-secondary {
+   @media screen and (min-width:$bptablet) {
+        visibility:visible;
+        position:static;      
+        height:2.8em;
+        min-height:2.8em;
+        border:0; 
+   }   
+}
+[class*="image-"] {
+    display:none;
+@media screen and (min-width:$bptablet) {
+    display:block;
+	max-width:80px;
+	margin-top:0;
+	background:$lightest;
+    border:4px solid lighten($midgrey,10%);
+	position:absolute;
+	left:2%;
+	top:-10px;
+}
+@media screen and (min-width:$bptablet) {
+	position:relative;
+	max-width:150px;
+	margin-top:$defaultgap;
+	margin-bottom:0;
+	border:8px solid lighten($midgrey,20%);
+	}
+}
+
+[class*="links-"] {
+    background:lighten($midgrey,30%);
+    @media screen and (min-width:$bptablet) {
+      /*  background:transparent;   */      
+    }
+}
+
+
+
+
+[class*="submenu-"] [class*="image-"] {
+
+
+
+
+
+
+
+}
+
+.logo {
+	display:none;
+	@media screen and (min-width:$bptablet) {
+	 display:block;
+	 float:left;
+	 max-width:170px;
+	 padding:$defaultgap 0;
+	 margin-right:$defaultgap;
+	}
+	 @media screen and (min-width:$bpdesktop) {
+    max-width:200px;
+
+	}
+}
+p.strapline {
+    display:none;
+    position:absolute;
+    left:0;
+    bottom:7px;
+    font-size:0.75em;
+    font-weight:bold;
+    margin-left:$defaultgap * 3;
+    color:lighten($midgrey,5%);
+    @media screen and (min-width:$bptablet) {
+       display:block; 
+        
+    }
+}
+p.strapline:before {
+    position:absolute;
+    content:"";
+    left:-32px;
+    top:-1px;
+    width:27px;
+    height:16px;
+    background:url('../images/unionjack.png') no-repeat top left;
+}
+
+.nav-secondary li:last-child {
+	@media screen and (min-width:$bptablet) {
+
+	}
+}
+[class*="nav-"] {
+	width:100%;
+	margin:auto;
+	text-align:center;
+	position:relative;
+	display:block;
+	z-index:100;
+	@media screen and (min-width:$bptablet) {
+		padding:0 0 0 10px;
+	}
+}
+[class*="nav-"] li {
+	display:block;
+	width:100%;
+	text-align:left;
+	padding:0;
+	@media screen and (min-width:$bptablet) {
+	float:left;
+	width:auto;
+	}
+ }
+.visible {
+	visibility:visible;
+	position:relative;
+}
+[class*="nav-"] li a {
+	position:relative;
+	@media screen and (max-width:$bptablet) {
+/*	position:static; */ /* WHAT DOES THIS BREAK? */
+/*	color:$lightest; */
+	}
+/*	color:$lightest; */
+	display:block;
+	&:hover {
+//		text-decoration:none;
+	}
+}
+[class*="nav-"] li a {
+	display:block;
+	margin-bottom:0;
+@media screen and (min-width:$bptablet) {
+	border-bottom:1px solid darken($midgrey,20%);
+}
+@media screen and (min-width:$bptablet) {
+     margin-bottom:0;
+     border-bottom:0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-secondary {
+	@media screen and (min-width:$bptablet) {
+		font-size:0.9em;
+		font-weight:bold;
+		background:darken($midgrey,15%);
+		color:$fontdefault;
+        border-bottom:1px solid $lightest;
+	}
+}
+.links-support {
+    background:transparent;
+	@media screen and (min-width:$bptablet) {
+	float:right;
+	width:82%;
+}
+	@media screen and (min-width:$bpdesktop) {
+	width:83%;
+		}
+}
+.links-support li {
+		@media screen and (min-width:$bptablet) {
+		/*	background:yellow; */
+}
+}
+li.search {
+	@media screen and (min-width:$bptablet) {
+	width:35%;
+}
+	@media screen and (min-width:$bpdesktop) {
+	width:45%;
+}
+}
+p.advisor {
+	margin-bottom:0;
+}
+.links-secondary {
+    background:transparent;
+	@media screen and (min-width:$bptablet) {
+	float:right;
+ }
+}
+.links-secondary a {
+  /*  margin-left:$defaultgap * 2; */
+    padding:$defaultgap 0 $defaultgap $defaultgap;
+    border-bottom:1px solid lighten($midgrey,10%);
+	@media screen and (min-width:$bptablet) {
+	display:block;
+  /*  margin-left:0; */
+	padding:0.7em $defaultgap * 3;
+	border-left:2px solid lighten($midgrey,10%);
+    border-bottom:0;
+	color:lighten($midgrey,35%);
+	  &:hover {
+	  background:$border;
+	  color:$lightest;
+ 	}
+  }
+}
+.links-secondary li:last-child a {
+	@media screen and (min-width:$bptablet) {
+	border-right:2px solid lighten($midgrey,10%);
+ 	}
+ }
+.nav-support {
+	@media screen and (min-width:$bptablet) {
+		font-size:1.25em;
+		background:lighten($midgrey,35%);
+		border-bottom:4px solid lighten($midgrey,30%);
+        border-top:1px solid $lightest;
+	}
+}
+.nav-products {
+	@media screen and (min-width:$bptablet) {
+		@include linear-gradient(lighten($midgrey,45%), lighten($midgrey,5%));
+		border-bottom:4px solid darken($midgrey,35%);
+	}
+}
+a.icon-dropdown {
+	position:relative;
+}
+a.icon-home { 
+	position:relative;
+
+}
+a.icon-home > span {
+    margin-left:$defaultgap * 2;
+    @media screen and (min-width:$bptablet) {
+    visibility: hidden;
+    }
+}
+.products-links {
+	position:relative;
+}
+.nav-support a {
+	@media screen and (min-width:$bptablet) {
+		padding:$defaultgap / 2 0;
+	}
+}
+ li.callback, li.contact {
+ 	position:relative;
+ 	@media screen and (min-width:$bptablet) {
+ 	display:block;
+	padding:$defaultgap * 0.5 0 0 $defaultgap;
+}
+	@media screen and (min-width:$bpdesktop) {
+	padding:$defaultgap * 1.2 0 0 $defaultgap * 2;
+}
+}
+ li.callback a {
+ 	color:darken($midgrey,35%);
+ }
+
+
+p.tel {
+	font-size:1.5em;
+}
+p.tel a {
+	padding:0;
+}
+
+[class*="links-"] {
+	display:none;
+	@media screen and (min-width:$bptablet) {
+ 	 display:block;
+	}
+}
+.links-products {
+	display:block;
+}
+form.product-search {
+	width:95%;
+	@media screen and (min-width:$bptablet) {
+	width:70%;		
+	}
+	@media screen and (min-width:$bptablet) {
+	display:block;
+	width:98%;
+    margin:0 0 0.7em 0;
+	padding:0 0 0 0;
+	position:relative;
+}
+}
+
+
+
+
+
+
+
+
+.product-search input[type=text] {
+	margin:$defaultgap 0px 1em $defaultgap;
+	@media screen and (min-width:$bptablet) {
+		margin-top:1.3em !important;
+	}
+
+
+		@media screen and (min-width:$bpdesktop) {
+	/*	margin:$defaultgap 0 0 $defaultgap* 540 $defaultgap; */
+	}
+	
+
+
+
+	@include border-radius(1em);
+	border:0;
+	font-size:1em;
+	
+
+	padding:$defaultgap / 1.5;
+	@media screen and (min-width:$bptablet) {
+	width: 100%;
+	margin:1em 0px 0em 0;
+	padding:$defaultgap / 2 $defaultgap / 2;
+	color:darken($midgrey,20%);
+}
+	@media screen and (min-width:$bpdesktop) {
+		margin:$defaultgap * 1.3 0 0 0;
+		}
+}
+
+.links-products > li {
+	@media screen and (min-width:$bptablet) {
+	width:20%;
+	text-align:left;
+
+}
+}
+
+.links-products > li > a {
+    font-size:1em;
+	text-shadow: 1px 1px $lightest;
+    color:darken($midgrey,30%);
+	@media screen and (min-width:$bptablet) {
+	padding:$defaultgap $defaultgap / 4;
+	display:block;
+	border-left:1px solid darken($lightest,8%);
+	text-align:center;
+	position:relative;
+ 	}
+     &:hover {
+      text-shadow: 1px 1px darken($lightest,10%);
+      text-decoration:none;
+	 @include linear-gradient(lighten($midgrey,41%), lighten($midgrey,1%));
+    }
+  @media screen and (min-width:$bpdesktop) {
+	font-size:1.25em;
+    padding:$defaultgap $defaultgap;
+  }
+}
+a.mobile-toggle {
+    text-shadow: 1px 1px $lightest;
+    color:darken($midgrey,30%);
+}
+
+
+
+
+.links-products > li:last-child > a {
+		border-right:1px solid darken($lightest,8%);
+}
+
+li.search {
+	padding-bottom:$defaultgap; 
+	border-bottom:1px solid lighten($midgrey,5%);
+	@media screen and (min-width:$bptablet) {
+		border-bottom:0;
+	}
+}
+li.contact {
+	padding:$defaultgap 0 $defaultgap $defaultgap * 2.75;
+	color:darken($midgrey,35%);
+	border-bottom:1px solid lighten($midgrey,5%);
+	@media screen and (min-width:$bptablet) {
+		padding:$defaultgap 0 $defaultgap $defaultgap * 4;
+		border-bottom:0;
+	}
+	@media screen and (min-width:$bpdesktop) {
+		padding:$defaultgap 0 $defaultgap $defaultgap * 5.9;
+	}
+}
+li.callback {
+	padding:$defaultgap 0 $defaultgap $defaultgap * 2.75;
+/*	color:$lightest; */
+	border-bottom:1px solid darken($midgrey,20%);
+	@media screen and (min-width:$bptablet) {
+		margin-top:$defaultgap;
+		padding:$defaultgap 0 $defaultgap $defaultgap * 4;
+		border-bottom:0;
+	}
+	@media screen and (min-width:$bpdesktop) {
+		padding:$defaultgap 0 $defaultgap $defaultgap * 5.9;
+	}
+}
+li.callback a {
+	padding:0;
+	border-bottom:0;
+	@media screen and (min-width:$bptablet) {
+
+	}
+}
+a.mobile-toggle {
+	display:block;
+	width:100%;
+	text-align:left;
+	padding:$defaultgap $defaultgap $defaultgap  $defaultgap * 2.75;
+	border-bottom:1px solid lighten($midgrey,5%);
+	text-transform:uppercase;
+    @media screen and (min-width:$bpmobilelarge) {
+     padding:$defaultgap $defaultgap $defaultgap  $defaultgap * 3.5;       
+    }
+	@media screen and (min-width:$bptablet) {
+	 display:none;
+	}
+}
+
+.links-products li:hover > [class*="submenu-"] {
+ @media screen and (min-width:$bptablet) {
+	visibility:visible;
+ }
+ }
+
+ div.menu-column {
+	 position:relative;
+ @media screen and (min-width:$bptablet) {
+	 position:static;
+	float:left;
+	width:25%;
+	height:20em;
+	text-align:left;
+	margin:0 0 0 0;
+	border-left:1px solid lighten($midgrey,22%);
+	padding:$defaultgap / 2 $defaultgap;
+ }
+}
+div.menu-column:last-child {
+	border-right:1px solid lighten($midgrey,22%);
+}
+div.menu-column a {
+	margin:$defaultgap 0 $defaultgap * 1.5 0;
+ 	font-size:0.9em;
+    text-transform:uppercase;
+	text-shadow: 1px 1px $lightest;
+	display:block;
+	border-left:1px solid darken($lightest,8%);
+	position:relative;
+	color:darken($midgrey,30%) !important;
+ @media screen and (min-width:$bpdesktop) {
+     font-size:1.25em;
+ }
+	}
+div.menu-column h2 {
+	font-size:0.9em;
+    font-weight:normal;
+	margin-left:47px;
+	text-align:left;
+    @media screen and (min-width:$bptablet) {
+    margin-left:58px;
+    }
+ @media screen and (min-width:$bptablet) {
+	font-size:1.25em;
+	padding:0;
+	margin-left:0;
+	
+ }
+  @media screen and (min-width:$bpdesktop) {
+     font-size:1em; 
+  }
+}
+div.menu-column p {
+	font-size:0.75em;
+	color:darken($midgrey,15%);
+    margin-left:47px;
+	text-align:left;
+        @media screen and (min-width:$bptablet) {
+    margin-left:58px;
+    }
+@media screen and (min-width:$bptablet) {	
+	margin-left:0;
+	font-size:1em;
+	
+}
+}
+div.menu-column a {
+    @media screen and (min-width:$bptablet) {
+	color:$border;
+    }
+}
+
+.open {
+	color:darken($midgrey,35%) !important;
+	background:$value;
+    background:lighten($midgrey,10%);
+	font-weight:bold;
+	
+}
+
+/* webapp nav */
+nav.apply {
+@media screen and (min-width:$bptablet) {
+	}
+	@media screen and (min-width:$bptablet) and (max-width:$bpdesktop) {
+		min-height:3.2em;
+		height:3.2em;
+	}
+	@media screen and (min-width:$bpdesktop) {
+		min-height:4em;
+		height:4em;
+ 	}
+  }

@@ -1,0 +1,27 @@
+@mixin clearfloat() {
+	content:"";
+	display:table;
+	clear:both;
+}
+@mixin border-radius($radius) {
+	border-radius:$radius;
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	-o-border-radius:$radius;
+}
+@mixin center() {
+	margin:0 auto;
+	text-align:center;
+	position:relative;
+}
+ @mixin floated-col($width) {
+ 	float:left;
+ 	width:$width;
+ }
+@mixin linear-gradient($top,$bottom) {
+  background: $top; /* Old browsers */
+  background: -webkit-linear-gradient($top, $bottom); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($top, $bottom); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($top, $bottom); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($top, $bottom); /* Standard syntax */
+ }

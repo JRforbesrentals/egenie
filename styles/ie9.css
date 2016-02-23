@@ -1,0 +1,14 @@
+/*
+[class*="tooltip-"] {
+    display:none !important;
+}
+[class*="module-box-steps"] {
+    display:none !important;
+}
+* {
+    display:none !important;
+}
+body {
+    border:10px dotted green !important;
+}
+*/

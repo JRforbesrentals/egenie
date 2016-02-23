@@ -1,0 +1,233 @@
+nav {
+	background:$secondary;
+	color:$lightest;
+	@include center();
+}
+nav a {
+	color:$lightest;
+}
+[class*="submenu-"] {
+	position:absolute;
+	visibility:hidden;
+/*	padding:$defaultgap $defaultgap; */
+	background:$products;
+	left:0;
+/*	width:54em; */
+	width:100%;
+	z-index:1003;
+/*	@include border-radius(0 0 0.5em 0.5em); */	
+	border-bottom:4px solid darken($products,20%);
+}
+/*
+.submenu-homelaundry {
+	left:0;
+}
+.submenu-dishwashers {
+	left:-10.1em;
+}
+.submenu-fridges {
+	left:-19.56em;
+}
+.submenu-cookers {
+	left:-26.06em;
+}
+.submenu-tvs {
+	left:-33.14em;
+}
+.submenu-scooters {
+	left:-36.97em;
+}
+.submenu-accessories {
+	left:-44.66em;
+}
+*/
+div.menu-column-wrapper {
+
+}
+
+
+div.menu-column {
+	float:left;
+	width:22%;
+	text-align:left;
+	margin-right:2%;
+	border-left:1px solid lighten($products,5%);
+	padding:$defaultgap / 2 $defaultgap $defaultgap $defaultgap * 1.5;
+}
+div.menu-column h2 {
+	margin-bottom:$defaultgap / 2;
+}
+div.menu-column:last-child {
+	
+	}
+div.menu-column p {
+	font-size:0.75em;
+}
+
+
+div.image-category {
+	display:block;
+	width:11em;
+	height:8.5em;
+	margin-top:$defaultgap;
+	background:url('../images/catimage.png');
+	background-size:cover;
+	border:8px solid lighten($products,20%);
+}
+
+
+
+[class*="nav-"] {
+/*	padding:$defaultgap * 2; */
+}
+.nav-secondary {
+	background:$secondary;
+	font-size:0.75em;
+	font-weight:bold;
+}
+.nav-support {
+	background:$support;
+	font-size:0.9em;
+}
+
+.nav-support a {
+	display:block;
+/*	padding:$defaultgap / 2 $defaultgap * 1.75; */
+	padding:$defaultgap / 2 0;
+  }
+ li.callback, li.contact {
+ 	display:block;
+	width:100px;
+	padding:$defaultgap * 1.2 0 0 $defaultgap * 4.5;
+	position:relative;
+
+}
+ li.callback:before, li.contact:before {
+ 	position:absolute;
+ 	content:"";
+ 	width:3em;
+ 	height:3em;
+ 	top:$defaultgap;
+ 	left:$defaultgap;
+ 	@include border-radius(6em);
+ 	background:darken($support,5%);
+ }
+  li.callback:after , li.contact:after  {
+  	position:absolute;
+  	top:26px;
+  	left:23px;
+  	font-style:italic;
+  }
+ li.callback:after {
+ 	content:"icon";
+ 	color:$lightest;
+ }
+ li.contact:after {
+ 	content:"icon";
+ 	color:$lightest;
+}
+ li.callback {
+ 	padding-top:$defaultgap * 1.5;
+ }
+  li.callback a {
+ 	padding-left:0;
+ }
+p.tel {
+	font-size:1.5em;
+}
+.nav-products {
+	background:$products;
+}
+[class*="links-"], [class*="links-"] li  {
+	float:left;
+	}
+[class*="links-"] li  {
+	width:auto;
+/*	position:relative; */
+}
+.links-secondary {
+	float:right;
+}
+.links-secondary a {
+	display:block;
+	padding:$defaultgap / 2 $defaultgap * 2;
+	border-left:1px solid lighten($secondary,2%);
+	  &:hover {
+	  background:darken($secondary,5%);
+ 	}
+}
+.links-secondary li:last-child a {
+	border-right:1px solid lighten($secondary,2%);
+	}
+.links-support {
+ 
+}
+.logo {
+	max-width:200px;
+	padding:$defaultgap / 2 0 $defaultgap / 2 0;
+	margin-right:$defaultgap;
+}
+form.product-search {
+	display:block;
+	width:17em;
+	padding:$defaultgap * 1.6 0 $defaultgap / 2 0;
+	position:relative;
+}
+.product-search input[type=text] {
+	@include border-radius(1em);
+	border:0;
+	font-size:1em;
+	width: 100%;
+	padding:$defaultgap / 2 $defaultgap / 2;
+	color:darken($secondary,20%);
+
+}
+
+
+
+
+
+
+.links-products > li > a {
+	border-left:1px solid lighten($products,5%);
+    &:hover {
+	  @include linear-gradient($products, darken($products,20%));
+ 	}
+}
+
+.links-products > li:last-child a {
+		border-right:1px solid lighten($products,5%);
+}
+
+
+a.callback {
+
+}
+[class*="links-"] a {
+	display:block;
+/*	padding:$defaultgap $defaultgap * 2; */
+	}
+.links-products > li > a {
+	padding:$defaultgap $defaultgap;
+	}
+.nav-products {
+	//	box-shadow: 0px 3px 3px lighten($midgrey,10%);
+		@include linear-gradient($products, darken($products,10%));
+	}
+
+
+
+
+.links-products li:hover > [class*="submenu-"] {
+ @media screen and (min-width:$bptablet) {
+	visibility:visible;
+ }
+ }
+
+
+
+
+ .carouselwrapper {
+ 	background:#333;
+ 	padding:$defaultgap * 10;
+ }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+	<item>
+		<manufacturer>Bosch</manufacturer>
+		<description>Washing Machine 1200 6kg</description>
+		<code>WAE24063</code>
+		<url>http://www.forbes-rentals.co.uk/product.asp?prodid=BOSWAE24063&Category=J</url>
+	</item>
+	<item>
+		<manufacturer>Bosch</manufacturer>
+		<description>Dishwasher</description>
+		<code>SMS40T42</code>
+		<url>http://www.forbes-rentals.co.uk/product.asp?prodid=BOSSMS40T42&Category=K</url>
+	</item>
+	<item>
+		<manufacturer>Beko</manufacturer>
+		<description>Under Counter Freezer</description>
+		<code>UF584APW</code>
+		<url>http://www.forbes-rentals.co.uk/product.asp?prodid=BEKUF584APW&Category=L</url>
+	</item>
+	<item>
+		<manufacturer>Panasonic</manufacturer>
+		<description>3D Home Cinema Sound Bar</description>
+		<code>123445</code>
+		<url>http://www.forbes-rentals.co.uk/product.asp?prodid=PANSC-HTB20&Category=I</url>
+	</item>	
+	<item>
+		<manufacturer>Shoprider</manufacturer>
+		<description>Cadiz Mobility Scooter</description>
+		<code>323242</code>
+		<url>http://www.forbes-rentals.co.uk/product.asp?prodid=SRS889SL&Category=ZC</url>
+	</item>
+</products>

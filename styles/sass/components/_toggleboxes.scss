@@ -1,0 +1,78 @@
+[class*="toggler-"] {
+	display:block;
+	width:100%;
+	position:relative;
+	background:$lightest;
+	margin-bottom:$defaultgap / 2;
+}
+.toggler-faqs {
+	border:1px solid $border;
+	@include border-radius(5px 5px 5px 5px);
+	padding:$defaultgap / 2 $defaultgap / 2  $defaultgap / 2 $defaultgap;
+}
+
+
+[class*="toggle-link"] {
+	padding-left:$defaultgap * 1.25;
+	display:block;
+	width:100%;
+	margin:0;
+	color:$border;
+	position:relative;
+	&:hover {
+		cursor:pointer;
+	}
+  }
+[class*="toggle-link"]:before {
+
+}
+
+
+
+[class*="toggle-box"] {
+	display:none;
+}
+.toggle-box-benefits {
+    font-size:0.9em;
+    margin-top:$defaultgap / 2;
+    padding-left:$defaultgap * 1.6;
+}
+.toggle-box-terms {
+    padding-left:$defaultgap * 1.6;
+}
+.toggle-box-terms p {
+    font-size:0.75em;
+    margin-bottom:$defaultgap;
+       
+}
+
+[class*="toggle-link-"] {
+	position:relative;
+}
+.toggle-link-benefits {
+	position:relative;
+}
+
+
+.toggle-link-faqs {
+	font-size:1.25em;
+}
+.toggle-box-faqs p:last-child {
+    margin-bottom:0;
+}
+/*
+.toggle-link-faqs p a {
+    color:$border !important;   
+}
+*/
+.toggle-box-faqs {
+    margin:$defaultgap / 2 0 0 $defaultgap * 1.5;  
+}
+.toggle-link-benefits {
+	font-size:1em;
+}
+.toggle-link-terms {
+	font-size:0.75em;
+    margin:$defaultgap 0;
+    padding-left:$defaultgap * 2;
+}

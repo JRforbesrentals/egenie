@@ -1,0 +1,153 @@
+[class*="button-"]  {
+	@include border-radius(3px);
+	color:$lightest;
+	transition: background-color 0.2s ease;
+	background-color:$value;
+	text-align:center;
+	border:none;
+ 	box-shadow:1px 1px 0 lighten($value,30%) inset;
+	background:$value;
+	background: -webkit-gradient(linear, left top, left bottom, from($value), to(darken($value,10%)));
+	background: -webkit-linear-gradient(top, $value, darken($value,10%));
+	background: -moz-linear-gradient(top, $value, darken($value,10%));
+	background:-ms-linear-gradient(top, $value, darken($value,10%));
+	background: -o-linear-gradient(top, $value, darken($value,10%));
+	background: linear-gradient(top, $value, darken($value,10%));
+	&:hover {
+	background:darken($value,20%);
+	background:darken($value,20%);
+	background: -webkit-gradient(linear, left top, left bottom, from($value), to(darken($value,20%)));
+	background: -webkit-linear-gradient(top, $value, darken($value,20%));
+	background: -moz-linear-gradient(top, $value, darken($value,20%));
+	background:-ms-linear-gradient(top, $value, darken($value,20%));
+	background: -o-linear-gradient(top, $value, darken($value,20%));
+	background: linear-gradient(top, $value, darken($value,20%));
+	}	
+}
+.button-primary {
+	font-size:1.25em;
+	display:block;
+	margin:$defaultgap 0 0 0;
+	padding:$defaultgap / 2 4%;
+	width:100%;
+
+}
+.button-rentproduct {
+	font-size:1.25em;
+	padding:$defaultgap / 2 4%;
+	display:block;
+	margin:$defaultgap / 2 auto;
+	text-align:center;
+	width:100%;
+}
+.button-moreinfo {
+	float:left;
+	display:block;
+	padding:$defaultgap / 2.5 4%;
+	font-size:1.25em;
+	background:$lightest;
+	&:hover {
+	background:lighten($value,60%) 
+	}
+}
+.button-apply {
+	float:right;
+	padding:$defaultgap / 2 4%;
+	font-size:1.25em;
+}
+.button-moreinfo {
+	background-color:$lightest;
+	border:2px solid $value;
+	color:$value;
+	&:hover {
+		background-color:lighten($value,40%);
+	}
+}
+
+.button-next {
+  position:absolute;
+  right:3.5%;
+  top:$defaultgap;
+  padding:$defaultgap / 2 4%;
+  display:block;
+  font-size:1em;
+  @media screen and (min-width:$bptablet) {
+	right:2.5%;  
+  }
+}
+.button-carousel {
+	font-size:1em;
+	display:block;
+	margin:$defaultgap / 2 auto 0 auto;
+	padding:$defaultgap / 2.5 4%;
+	width:43%;
+/*	float:right;
+	text-align:center !important; */
+	@media screen and (min-width:$bpmobilelarge) {
+		font-size:1.25em;
+	}
+		@media screen and (min-width:$bptablet) {
+	//	margin-top:-$defaultgap * 3;
+	}
+	@media screen and (min-width:$bpdesktop) {
+		margin-top:$defaultgap / 2;
+	}
+}
+.button-benefits {
+	position:absolute;
+	left:$defaultgap / 2;
+	bottom:$defaultgap / 2;
+	background:transparent;
+	border:2px solid $lightest;
+	color:$lightest;
+	display:block;
+	margin-top:$defaultgap;
+	padding:$defaultgap / 2.5 $defaultgap;
+	font-size:1em;
+	width:8em;
+	box-shadow:none;
+	&:hover {
+		background:darken($price,10%);
+		background:darken($price,10%);
+		background: -webkit-gradient(linear, left top, left bottom, from($price), to(darken($price,10%)));
+		background: -webkit-linear-gradient(top, $price, darken($price,10%));
+		background: -moz-linear-gradient(top, $price, darken($price,10%));
+		background:-ms-linear-gradient(top, $price, darken($price,10%));
+		background: -o-linear-gradient(top, $price, darken($price,10%));
+		background: linear-gradient(top, $price, darken($price,10%));
+	}	
+}
+.button-carousel-moreinfo {
+	font-size:1em;
+	display:block;
+	margin:$defaultgap / 2 auto 0 auto;
+	padding:$defaultgap / 2.5 4%;
+	width:43%;
+	background:$lightest;
+	border:2px solid $value;
+	color:$value !important;
+	&:hover {
+		background:lighten($value,40%) !important;
+	}
+	@media screen and (min-width:$bpmobilelarge) {
+		font-size:1.25em;
+	}
+		@media screen and (min-width:$bptablet) {
+	//	margin-top:-$defaultgap * 3;
+	}
+	@media screen and (min-width:$bpdesktop) {
+		margin-top:$defaultgap / 2;
+	}
+}
+.button-callme {
+	margin-top:$defaultgap;
+	font-size:0.9em;
+}
+.float-button {
+	@media screen and (max-width:$bptablet) {
+	float:left;
+	margin:0 $defaultgap $defaultgap / 4 0;
+}
+}
+
+

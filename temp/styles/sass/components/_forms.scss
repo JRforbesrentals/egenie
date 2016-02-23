@@ -1,0 +1,304 @@
+ul.progressbar {
+ 	margin:$defaultgap * 1.5 auto $defaultgap * 1.5 auto;
+ 	width:100%;
+  	max-width:600px;
+ 	text-align:center;
+ 	border-top:2px solid $border;
+ 	padding-top:$defaultgap / 2.8;
+ 	position:relative;
+ }
+   ul.progressbar li {
+   	float:left;
+  	vertical-align:top;
+  	line-height:1;
+    padding:0 1% 0 1%;   
+    width:25%;
+    min-width:5.8em;
+ 	  position:relative;
+    font-size:0.75em;
+ 	@media screen and (min-width:$bpmobilelarge) {
+		padding:0 6.5% 0 6.5%;
+ 	}
+ 	@media screen and (min-width:$bptablet) {
+		padding:0 9% 0 9%;
+ 	}
+  }
+  ul.progressbar:before, ul.progressbar:after {
+  	position:absolute;
+  	content:"";
+  	width:2px;
+  	height:1.500em;
+  	background:$border;
+  	top:-13px;
+  }
+  ul.progressbar:before {
+  	left:0;
+  }
+   ul.progressbar:after {
+  	right:0;
+  }
+ .notstartedstep {
+  	color:$border;
+  }
+  .completedstep {
+  	color:$success;
+  }
+  .completedstep:before {
+  	position:absolute;
+  	content:"";
+  	background:url('../images/progresstick.svg') no-repeat 98% 5%;
+  	width:20px;
+  	height:17px;
+  	top:-25px;
+    left:42%;
+    right:50%;
+    @media screen and (min-width:$bptablet) {
+    left:55%;
+    }
+  }
+  .activestep {
+  	font-weight:bold;
+  	color:$midgrey;
+  	position:relative;
+  }
+  .activestep:before {
+  	position:absolute;
+  	content:"";
+  	width:30px;
+  	height:30px;
+  	top:-31px;
+    left:31%;
+    right:50%;
+  	background:url('../images/van.svg') no-repeat center center;
+  	@media screen and (min-width:$bpmobilelarge) {
+		left:38%;
+  }
+    @media screen and (min-width:$bptablet) {
+    left:41%;
+    }
+  }
+
+
+
+label {
+  margin:0 0 0 0;
+  font-size:1em;
+  @media screen and (min-width:$bptablet) {
+  text-align:right;  
+  margin-top:$defaultgap / 4;
+ 	float:right;
+  }
+}
+fieldset {
+  border:none;
+}
+input[type="text"], select, textarea {
+ @include border-radius(5px);
+  border:1px solid $border;
+  width:99%;
+  padding:$defaultgap / 2 3.2%;
+  font-size:1.25em;
+}
+
+form.product-buttons {
+@media screen and (min-width:$bpmobilelarge) {
+  margin:$defaultgap auto;
+  width:60%;
+}
+    margin:$defaultgap 0 $defaultgap 0;
+    padding:0 $defaultgap $defaultgap * 1.25 $defaultgap;
+    @media screen and (min-width:$bpdesktop) {
+    width:100%;
+    margin:$defaultgap * 2.25 0 $defaultgap * 2.25 0;
+    padding:0 $defaultgap $defaultgap * 1.25 $defaultgap;
+  }
+}
+
+input.main {
+  background:$callout url('../images/search.svg') no-repeat 98% 5%;
+  color:lighten($midgrey,20%);
+  @include border-radius(5px 5px 0 0);
+  padding:$defaultgap / 2 5%;
+  font-size:1.5em;
+  font-weight:bold;
+  margin:$defaultgap / 2 0 0 0;
+  width:100%;
+  text-shadow:none;
+}
+div.discount {
+  font-size:0.75em;
+  border:1px solid $border;
+  @include border-radius(0 0 5px 5px);
+  border-top:0;
+
+  background:lighten($price,35%);
+  color:$price;
+  text-align:center;
+  font-weight:bold;
+  padding:$defaultgap / 2 0;
+  width:100%;
+}
+label.readterms {
+  float:none;
+  font-size:0.75em;
+  font-weight:bold;
+  margin-left:$defaultgap * 2;
+}
+
+input.checkboxterms {
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+
+input[type="text"].readonly {
+  border:none;
+  color:$fontdefault;
+  padding-top:0;
+  padding-bottom:0;
+}
+
+
+
+
+
+
+
+.termscontainer {
+  @media screen and (max-width:$bptablet) {
+  font-size:0.75em;
+  border:1px solid $border;
+  height:16em;
+  overflow:scroll;
+  line-height: 1.5;
+  @include border-radius(5px);
+}
+  @media screen and (min-width:$bptablet) {
+      border:none;
+      height:100%;
+    }
+}
+.termsdescription {
+  @media screen and (min-width:$bptablet) {
+      display:none;
+    }  
+}
+.termsindividual {
+   @media screen and (min-width:$bptablet) {
+      border:1px solid $border;
+      @include border-radius(5px);
+      margin-bottom:$defaultgap;
+      padding: 0.5em 2%;
+    }   
+}
+.termsindividual:last-child {
+     @media screen and (min-width:$bptablet) {
+      margin-bottom:0;
+     }
+    }
+  div.terms h5 {
+  font-size:0.75em;
+  margin:$defaultgap / 2 0;
+}
+
+.terms p {
+  font-size:0.75em;
+}
+
+
+
+h6.toggle-terms {
+  font-size:0.75em;
+  padding-left:$defaultgap * 2; 
+}
+  h6.toggle-terms:before {
+  position:absolute;
+  content:"";
+  background:$border;
+  width:14px;
+  height:14px;
+  left:3px;
+  top:5px;
+  @include border-radius(7px);
+}
+.toggle-terms {
+  display:none;
+  padding:0 $defaultgap $defaultgap $defaultgap * 1.75;
+  font-size:1em;
+  font-weight:normal;
+  line-height:1.7;
+}
+.terms p {
+    font-size: 0.75em;
+}
+
+
+
+span.error {
+  @media screen and (max-width:$bptablet) {
+  display:block;
+  }
+ font-size:1.25em;
+ color:$lightest;
+ background:$error;
+ padding:$defaultgap / 4 $defaultgap / 2;
+ @include border-radius(3px 3px 3px 3px);
+}
+
+
+.prompt {
+  background:$price;
+  color:$lightest;
+  @include border-radius(2px);
+  padding:$defaultgap / 4 $defaultgap / 2;
+}
+
+[class*="formnav"] {
+  position:relative;
+  background:lighten($midgrey,33%);
+  padding:$defaultgap * 2 0;
+  border-top:1px solid $border;
+  }
+form.quickenquiry {
+
+}
+form.quickenquiry label {
+  text-align:left;
+  display:block;
+  width:100%;
+  margin:$defaultgap 0 $defaultgap / 4 0;
+}
+form.quickenquiry {
+
+}
+form.quickenquiry input[type="text"], form.quickenquiry select, form.quickenquiry textarea {
+  display:block;
+  width:100%;
+
+}
+.quickenquiry label:first {
+  background:pink;
+  vertical-align:top;
+}
+.quickenquiry label {
+  float:none;
+}
+
+
+
+
+
+  .ui-autocomplete {
+    max-height: 500px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 500px;
+  }
+

@@ -1,0 +1,60 @@
+  a.lightBox {
+    top: 4em;
+    position: relative;
+  }
+  a.lightBox:hover {
+    cursor: pointer;
+    border-bottom: 1px dotted rgba(255,255,255,.8);
+  }
+  div.veil {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    z-index:39999;
+  }
+  div.lightBoxModal {
+    background:$lightest;
+    border:4px solid $border;
+    @include border-radius(5px);
+    padding:$defaultgap;
+    text-align:center;
+    top:300px;
+    margin:-550px auto 0 auto;
+    position:absolute;
+    width:90%;
+    min-height:35em;
+    z-index:40000;
+    @media screen and (min-width:$bptablet) {
+     width:40em;
+     min-height:33em; 
+    }
+  }
+
+  div.lightBoxModal  .formnav-blank {
+    padding:$defaultgap * 1.5 0;
+    background:$lightest;
+    border-top:0;
+  }
+  span.close {
+    position:absolute;
+    top:0.5em;
+    right:0.5em;
+    cursor:pointer;
+  }
+    div.lightBoxModal h3 {
+    font-size:1.25em;
+    margin-bottom:0;
+    @media screen and (min-width:$bptablet) {
+    font-size:1.75em;
+    margin-bottom:$defaultgap / 2;
+    }
+  }
+    div.lightBoxModal [class*="col-"] {
+    padding:4px;
+    @media screen and (min-width:$bptablet) {
+	padding:10px;
+    }
+}

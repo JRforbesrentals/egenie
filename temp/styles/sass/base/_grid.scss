@@ -1,0 +1,94 @@
+[class*="col-"] {
+	display:block;
+	padding:10px;
+	width:100%;
+	text-align:left;
+}
+div.row {
+	display:block;
+	position:relative;
+	margin:0 -10px;
+	margin-bottom:0;
+}
+.clearfix:after {
+	@include clearfloat();
+}
+@media screen and (min-width:$bpmobilelarge) {
+.col-1 {
+	float:left;
+	width:8.33%;
+}
+.col-2 {
+	float:left;
+	width:16.66%;
+}
+.col-3 {
+	float:left;
+	width:25%;
+}
+.col-4 {
+	float:left;
+	width:33.33%;
+}
+.col-5 {
+	float:left;
+	width:41.66%;
+}
+.col-6 {
+	float:left;
+	width:50%;
+}
+.col-7 {
+	width:58.33%;
+}
+.col-8 {
+	float:left;
+	width:66.66%;
+}
+.col-9 {
+	float:left;
+	width:75%;
+}
+.col-10 {
+	float:left;
+	width:83.33%;
+}
+.col-11 {
+	float:left;
+	width:91.66%;
+}
+.col-12 {
+	float:left;
+	width:100%;
+}
+.columns {
+	float:left;
+	width:50%;
+}
+.col-right {
+	float:right;
+}
+}
+@media screen and (max-width:$bpmobilelarge) {
+.col-collapsing {
+	display:none;
+	}
+}
+@media screen and (max-width:$bptablet) {
+ .col-collapsing-large {
+	display:none;
+	}
+ .col-expanded {
+	 width:100%;
+	 display:block;
+ }
+}
+.col-6-float {
+  @include floated-col(50%);
+}
+@media screen and (min-width:$bptablet) {
+  .col-midblock {
+	 width:100%;
+	 display:block;
+	 }
+}
